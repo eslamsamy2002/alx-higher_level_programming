@@ -3,13 +3,13 @@
 
 
 class Square:
-    """define square"""
+    """square"""
 
     def __init__(self, size=0, position=(0, 0)):
         """init
         Args:
-            size: length
-            position: ..
+            size: size of the square
+            position: position of the square x, y
         """
         self.size = size
         self.position = position
@@ -43,11 +43,11 @@ class Square:
         raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
-        """area"""
+        """area of a square"""
         return self.size ** 2
 
     def my_print(self):
-        """print a line"""
+        """print an empty line"""
         if self.size == 0:
             print()
             return
