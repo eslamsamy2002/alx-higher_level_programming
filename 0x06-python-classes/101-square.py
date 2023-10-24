@@ -44,7 +44,7 @@ class Square:
 
     def area(self):
         """square"""
-        return self.size ** 2
+        return self.size**2
 
     def my_print(self):
         """print a line"""
@@ -52,17 +52,19 @@ class Square:
             print()
             return
         """print a square of # in position"""
-        print(("\n" * self.position[1]) +
-              ((" " * self.position[0]) +
-               ("#" * self.size + "\n")) * self.size, end="")
+        print(
+            ("\n" * self.position[1])
+            + ((" " * self.position[0]) + ("#" * self.size + "\n")) * self.size,
+            end="",
+        )
 
     def __str__(self):
         """same thing in my_print string of a square of # in position"""
         if self.size == 0:
             return ""
         else:
-            my_string = (("\n" * self.position[1]) +
-                    ((" " * self.position[0]) +
-                     ("#" * self.size + "\n")) * (self.size))
+            my_string = ("\n" * self.position[1]) + (
+                (" " * self.position[0]) + ("#" * self.size + "\n")
+            ) * (self.size)
 
             return my_string.rstrip("\n")
