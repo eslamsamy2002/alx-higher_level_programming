@@ -3,25 +3,25 @@
 
 
 class Square:
-    """defines square"""
+    """define square"""
 
     def __init__(self, size=0, position=(0, 0)):
         """init
         Args:
             size: length
-            position: ...
+            position: ..
         """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """getter"""
+        """size getter"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """setter"""
+        """size setter"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -30,12 +30,12 @@ class Square:
 
     @property
     def position(self):
-        """getter"""
+        """position getter"""
         return self.__position
 
     @position.setter
     def position(self, value):
-        """setter"""
+        """position setter"""
         if isinstance(value, tuple) and len(value) == 2:
             if all(isinstance(num, int) and num >= 0 for num in value):
                 self.__position = value
@@ -43,8 +43,8 @@ class Square:
         raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
-        """square"""
-        return self.size**2
+        """area"""
+        return self.size ** 2
 
     def my_print(self):
         """print a line"""
@@ -52,19 +52,17 @@ class Square:
             print()
             return
         """print a square of # in position"""
-        print(
-            ("\n" * self.position[1])
-            + ((" " * self.position[0]) + ("#" * self.size + "\n")) * self.size,
-            end="",
-        )
+        print(("\n" * self.position[1]) +
+              ((" " * self.position[0]) +
+               ("#" * self.size + "\n")) * self.size, end="")
 
     def __str__(self):
-        """same thing in my_print func"""
+        """ string of a square of # in position"""
         if self.size == 0:
             return ""
         else:
-            my_string = ("\n" * self.position[1]) + (
-                (" " * self.position[0]) + ("#" * self.size + "\n")
-            ) * (self.size)
+            my_string = (("\n" * self.position[1]) +
+                    ((" " * self.position[0]) +
+                     ("#" * self.size + "\n")) * (self.size))
 
             return my_string.rstrip("\n")
