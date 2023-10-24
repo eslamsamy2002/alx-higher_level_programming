@@ -59,7 +59,7 @@ class Square:
         )
 
     def __str__(self):
-        """same thing in my_print string of a square of # in position"""
+        """same thing in my_print func"""
         if self.size == 0:
             return ""
         else:
