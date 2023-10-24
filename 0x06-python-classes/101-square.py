@@ -51,7 +51,6 @@ class Square:
         if self.size == 0:
             print()
             return
-        """print a square of # in position"""
         print(("\n" * self.position[1]) +
               ((" " * self.position[0]) +
                ("#" * self.size + "\n")) * self.size, end="")
