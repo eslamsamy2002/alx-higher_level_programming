@@ -25,11 +25,12 @@ First import ``add_integer`` from the ``0-add_integer`` module:
     >>> add_integer(1, 5)
     6
 
-float overflow case:
-    >>> add_integer(float('inf') , -float('inf'))
+Add infinity:
+
+    >>> add_integer(float('inf'), float('-inf'))
     Traceback (most recent call last):
     ...
-    OverflowError: Float overflow: int too large to convert to float
+    OverflowError: cannot convert float infinity to integer
 
 None a:
     >>> add_integer(None, 2)
