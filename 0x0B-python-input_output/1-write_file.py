@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""just read"""
+"""write only"""
 
 
-def read_file(filename=""):
-    """read only"""
-    with open(filename, encoding="utf-8") as file:
-        read_data = file.read()
-        print(read_data, end="")
+def write_file(filename="", text=""):
+    """just write"""
+    with open(filename, encoding="utf-8", mode="w") as file:
+        return file.write(text)
