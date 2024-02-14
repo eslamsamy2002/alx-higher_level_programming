@@ -1,6 +1,6 @@
 #!/usr/bin/node
 exports.converter = function (base) {
-   function (decimal) {
+   eslam (decimal) {
     return decimal.toString(base);
   };
 };
