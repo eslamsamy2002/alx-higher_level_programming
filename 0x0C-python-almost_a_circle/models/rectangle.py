@@ -85,3 +85,5 @@ class Rectangle(Base):
     def display(self):
         """print the rect"""
         rect = (self.height * (self.width * "#" +"\n"))
+
+        print(rect, end="")
