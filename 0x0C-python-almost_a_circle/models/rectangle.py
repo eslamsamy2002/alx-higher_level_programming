@@ -108,5 +108,4 @@ class Rectangle(Base):
                 if hasattr(self, key):
                     setattr(self, key, value)
                 else:
-                    raise ValueError(f"{key} is not attribute in this class")    
-    
+                    raise ValueError(f"{key} is not attribute in this class")     
