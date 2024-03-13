@@ -34,12 +34,12 @@ class Square(Rectangle):
             att_list = ["id", "size", "x", "y"]
             for i , value in enumerate(args):
                 setattr(self, att_list[i], value)
-            else:
-                for key, value in kwargs.items():
-                    if hasattr(self, key):
-                        setattr(self, key, value)
-                    else:
-                        raise ValueError(f"{key} is not attribute in this class")
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+                else:
+                    raise ValueError(f"{key} is not attribute in this class")
 
 
 
