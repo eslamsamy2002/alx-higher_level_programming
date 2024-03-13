@@ -87,7 +87,7 @@ class Rectangle(Base):
         rect =self.y *"\n"+ (self.height * (self.x * " " + self.width * "#" +"\n"))
 
         print(rect, end="")
-
+    
     def __str__(self):
         """string method"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} " \
@@ -108,4 +108,14 @@ class Rectangle(Base):
                 if hasattr(self, key):
                     setattr(self, key, value)
                 else:
-                    raise ValueError(f"{key} is not attribute in this class")     
+                    raise ValueError(f"{key} is not attribute in this class")    
+
+    def to_dictionary(self):
+        """to dict"""
+        dictionary = {}
+        dictionary["id"] = self.id
+        dictionary["width"] = self.width
+        dictionary["height"] = self.height
+        dictionary["x"] = self.x
+        dictionary["y"] = self.y
+        return dictionary
