@@ -38,3 +38,11 @@ class Base:
                         json.loads(cls.to_json_string(obj.to_dictionary())))
             json.dump(mylist, file)
 
+    @staticmethod
+    def from_json_string(json_string):
+        """from json string"""
+        if json_string is None or json_string == "":
+            return []
+        return loads(json_string)
+
+
