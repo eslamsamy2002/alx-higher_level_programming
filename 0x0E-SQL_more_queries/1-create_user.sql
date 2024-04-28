@@ -1,4 +1,3 @@
--- Write a script that creates the MySQL server user user_0d_1.
 -- Check if the user exists
 SELECT COUNT(*) INTO @user_exists FROM mysql.user WHERE user = 'user_0d_1';
 
